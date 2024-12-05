@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BrowChips</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+      <div class="row align-items-center py-3 px-xl-5">
+        <div class="col-lg-3 d-none d-lg-block">
+          <a href="" class="text-decoration-none d-flex align-items-center">
+            <div
+              class="mr-2"
+              style="
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+              "
+            >
+              <img
+                src="img/logo.png"
+                alt="Logo"
+                style="width: 100%; height: auto"
+              />
+            </div>
+            <h1
+              class="m-0 display-5 font-weight-semi-bold"
+              style="color: saddlebrown"
+            >
+              DreamBrow
+            </h1>
+          </a>
+        </div>
+        <div class="col-lg-6 text-left">
+          <nav
+            class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0"
+          >
+            <a href="index.html" class="text-decoration-none d-lg-none">
+              <h1
+                class="mb-3 m-md-0 display-5 font-weight-semi-bold mt-3 mt-md-0"
+              >
+                DreamBrow
+              </h1>
+            </a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarCollapse"
+            >
+              <div class="navbar-nav mr-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="our_products.html" class="nav-item nav-link"
+                  >Our Product</a
+                >
+                <a href="contact_us.html" class="nav-item nav-link">Contact </a>
+                <a href="about_us.html" class="nav-item nav-link">About Us</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-lg-3">
+          <form action="">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search for products"
+              />
+              <div class="input-group-append">
+                <span class="input-group-text bg-transparent text-primary">
+                  <i class="fa fa-search"></i>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid mb-5">
+      <div class="row border-top px-xl-5">
+        <div class="col-lg-3 d-none d-lg-block"></div>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Checkout Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <h4 class="font-weight-semi-bold mb-4">Menu Order</h4>
+                    <form id="billingForm" onsubmit="return validateForm()">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label>First Name</label>
+                                <input class="form-control" type="text" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Last Name</label>
+                                <input class="form-control" type="text" placeholder="Last Name" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>No Whatsapp</label>
+                                <input class="form-control" type="text" placeholder="08xxxxx" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Password</label>
+                                <input class="form-control" type="password" placeholder="Password" required>
+                            </div>
+            
+                            <div class="col-md-12 form-group">
+                                <label>Shipping Address</label>
+                                <textarea class="form-control" rows="4" placeholder="Address" style="padding: 0.5cm;" required></textarea>
+                            </div>
+                            
+                            <div class="col-md-6 form-group">
+                                <label>Shipping Method</label>
+                                <select class="custom-select" required>
+                                    <option value="">Select method</option>
+                                    <option value="Regular" selected>Regular</option>
+                                    <option value="Express">Express</option>
+                                    <option value="Gosend">Gosend</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 form-group">
+                              <label>Additional Notes</label>
+                              <textarea class="form-control" rows="4" placeholder="Additional Notes" style="padding: 0.5cm;" required></textarea>
+                          </div>
+            
+                            <div class="col-md-12 form-group">
+                                <label>Please select your preferences (required):</label>
+                                <div>
+                                    <input type="checkbox" id="nuts" name="preferences" value="nuts">
+                                    <label for="nuts">Nuts</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="chocolate" name="preferences" value="chocolate">
+                                    <label for="chocolate">Chocolate</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="chips" name="preferences" value="chips">
+                                    <label for="chips">Chips</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="cheese" name="preferences" value="cheese">
+                                    <label for="cheese">Cheese</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="caramel" name="preferences" value="caramel">
+                                    <label for="caramel">Caramel</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="matcha" name="preferences" value="matcha">
+                                    <label for="matcha">Matcha</label>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card border-secondary mb-5">
+                    <div class="card-header bg-secondary border-0">
+                      <h4 class="font-weight-semi-bold m-0">Payment</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="payment" id="paypal" required>
+                          <label class="custom-control-label" for="paypal">Credit Card</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="payment" id="directcheck" required>
+                          <label class="custom-control-label" for="directcheck">Bank Transfer</label>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="payment" id="banktransfer" required>
+                          <label class="custom-control-label" for="banktransfer">Gopay</label>
+                        </div>
+                      </div>
+                      <!-- Voucher Code Input -->
+                      <div class="d-flex mt-4">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Enter voucher code"
+                          id="voucher-code"
+                          aria-label="Voucher Code"
+                        />
+                        <button
+                          type="button"
+                          class="btn btn-secondary ml-2"
+                          id="apply-voucher"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer border-secondary bg-transparent">
+                      <div class="d-flex justify-content-between mt-2">
+                        <h5 class="font-weight-bold">Total</h5>
+                        <h5 class="font-weight-bold" id="total-amount">$19.67</h5>
+                        <!-- Total = Subtotal + Shipping + Tax -->
+                      </div>
+                      <button
+                        type="submit"
+                        class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3"
+                      >
+                        Send Order
+                      </button>
+                    </div>
+                  </div>
+                  
+                <div class="card border-secondary ">
+                    <div class="m-4">
+                        <h4 class="font-weight-semi-bold mb-4">Steps for Payment</h4>
+                        <ol>
+                            <li class="my-2">Fill out the order form, including your personal information and preferences.</li>
+                            <li class="my-2">Select your desired shipping method from the available options.</li>
+                            <li class="my-2">Choose your payment method (Credit Card, Bank Transfer, or Gopay).</li>
+                            <li class="my-2">Input the voucher code to get a discount</li>
+                            <li class="my-2">Review your order to ensure all details are correct.</li>
+                            <li class="my-2">Click on the "Send Order" button to submit your order.</li>
+                            <li class="my-2">Follow the instructions for completing your payment based on the selected method.</li>
+                            <li class="my-2">Wait for the confirmation by Whatsapp that includes your receipt and shipping details.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+                
+            
+            
+        </div>
+    </div>
+    <!-- Checkout End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
+      <div class="row justify-content-center px-xl-5 pt-5">
+        <div class="col-lg-6 col-md-12 mb-5">
+          <a
+            href=""
+            class="text-decoration-none d-flex align-items-center justify-content-start mb-3"
+          >
+            <div
+              class="mr-2"
+              style="
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                background-color: white;
+              "
+            >
+              <img
+                src="img/logo.png"
+                alt="Logo"
+                style="width: 100%; height: auto"
+              />
+            </div>
+            <h1
+              class="mb-0 display-5 font-weight-semi-bold"
+              style="color: saddlebrown; line-height: 50px"
+            >
+              DreamBrow
+            </h1>
+          </a>
+
+          <p>
+            At Dream Brownies, we are committed to delivering the best for our
+            customers. That's why we use only premium ingredients, ensuring
+            every brownie is crafted with care and perfection. From timeless
+            classic flavors to innovative creations, there's a delightful treat
+            for everyone to savor.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <h5 class="font-weight-semi-bold mt-3 mb-4">Store</h5>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt text-primary mr-3"></i>Cikarang
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope text-primary mr-3"></i>info@dreambrow.com
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt text-primary mr-3"></i>0811223344556
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-12">
+          <h5 class="font-weight-semi-bold mb-4 mt-3">Help</h5>
+          <ul type="none" class="border-0 rounded-0 w-100 m-0 pl-0">
+            <li class="my-3">
+              <a href="" class="text-primary">How To Order</a>
+            </li>
+            <li class="my-3">
+              <a href="" class="text-primary">FAQs</a>
+            </li>
+          </ul>
+          <h5 class="font-weight-bold my-4">Follow Us</h5>
+          <div class="d-flex">
+            <a href="#" class="btn btn-outline-primary mr-2"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="btn btn-outline-primary mr-2"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="btn btn-outline-primary mr-2"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="row border-top border-light mx-xl-5 mt-5 py-4 justify-content-center"
+      >
+        <div class="col-md-6 text-center">
+          <p class="mb-md-0 text-dark">
+            &copy;
+            <a class="text-dark font-weight-semi-bold" href="#"
+              >2024 DreamBrow</a
+            >. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
