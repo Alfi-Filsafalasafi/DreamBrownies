@@ -35,7 +35,7 @@
       <div class="row align-items-center py-3 px-xl-5">
         <div class="col-lg-3 d-none d-lg-block">
           <a
-            href="index.html"
+            href="home.html"
             class="text-decoration-none d-flex align-items-center"
           >
             <div
@@ -69,7 +69,7 @@
               <h3 class="font-weight-bold text-white">Register</h3>
             </div>
             <div class="card-body">
-              <form action="process_register.php" method="POST">
+              <form id="registerForm" method="POST">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -198,5 +198,31 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+      // Handle form submission
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent default form submission
+
+          // Get password and password confirmation values
+          const password = document.getElementById("password").value;
+          const passwordConfirmation = document.getElementById(
+            "passwordConfirmation"
+          ).value;
+
+          // Check if password and password confirmation match
+          if (password !== passwordConfirmation) {
+            alert("Password and password confirmation do not match.");
+            return; // Stop form submission if they don't match
+          }
+
+          // If passwords match, proceed to redirect
+          alert("Registration successful!");
+          window.location.href = "index.html"; // Redirect to index.html after successful registration
+        });
+    </script>
   </body>
 </html>
