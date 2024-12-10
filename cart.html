@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>BrowChips</title>
+    <title>Cart - BrowChips</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -22,9 +22,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
       rel="stylesheet"
     />
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
@@ -80,10 +77,11 @@
               <div class="navbar-nav mr-auto py-0">
                 <a href="home.html" class="nav-item nav-link">Home</a>
                 <a href="our_products.html" class="nav-item nav-link"
-                  >Our Product</a
+                  >Product</a
                 >
                 <a href="contact_us.html" class="nav-item nav-link">Contact </a>
                 <a href="about_us.html" class="nav-item nav-link">About Us</a>
+                <a href="check_out.html" class="nav-item nav-link">Check Out</a>
               </div>
             </div>
           </nav>
@@ -97,9 +95,9 @@
                 placeholder="Search for products"
               />
               <div class="input-group-append">
-                <span class="input-group-text bg-transparent text-primary">
-                  <i class="fa fa-search"></i>
-                </span>
+                <span class="input-group-text bg-transparent text-primary"
+                  ><i class="fa fa-search"></i
+                ></span>
               </div>
             </div>
           </form>
@@ -146,8 +144,7 @@
                     alt=""
                     style="width: 50px"
                     class="mr-3"
-                  />
-                  Blondies Brownies
+                  />Blondies Brownies
                 </td>
                 <td class="align-middle">$3.67</td>
                 <td class="align-middle">
@@ -171,7 +168,7 @@
                 </td>
                 <td class="align-middle">$3.67</td>
                 <td class="align-middle">
-                  <button class="btn btn-sm btn-primary">
+                  <button class="btn btn-sm btn-primary btn-delete">
                     <i class="fa fa-trash"></i>
                   </button>
                 </td>
@@ -179,14 +176,13 @@
               <tr>
                 <td class="align-middle">
                   <img
-                    src="img/cakey.jpg"
+                    src="img/fudgy.jpg"
                     alt=""
                     style="width: 50px"
                     class="mr-3"
-                  />
-                  Gingerbread Bliss
+                  />Fudgy Brownies
                 </td>
-                <td class="align-middle">$4.00</td>
+                <td class="align-middle">$4.0</td>
                 <td class="align-middle">
                   <div class="input-group quantity" style="width: 100px">
                     <div class="input-group-btn">
@@ -217,37 +213,32 @@
           </table>
         </div>
         <div class="col-lg-4">
-          <div class="card border-secondary mb-5">
+          <div class="card cart-summary border-secondary mb-5">
             <div class="card-header bg-secondary border-0">
               <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
             </div>
             <div class="card-body">
               <div class="d-flex justify-content-between mb-3 pt-1">
                 <h6 class="font-weight-medium">Subtotal</h6>
-                <h6 class="font-weight-medium">$7.67</h6>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <h6 class="font-weight-medium">Shipping</h6>
-                <h6 class="font-weight-medium">$10</h6>
+                <h6 class="font-weight-medium subtotal">$7.67</h6>
               </div>
               <div class="d-flex justify-content-between mb-3">
                 <h6 class="font-weight-medium">Tax (10%)</h6>
-                <h6 class="font-weight-medium">$2.00</h6>
-                <!-- PPN 10% dari $19.99 -->
+                <h6 class="font-weight-medium tax">$2.00</h6>
               </div>
             </div>
+
             <div class="card-footer border-secondary bg-transparent">
               <div class="d-flex justify-content-between mt-2">
                 <h5 class="font-weight-bold">Total</h5>
-                <h5 class="font-weight-bold">$19.67</h5>
+                <h5 class="font-weight-bold total">$8.44</h5>
                 <!-- Total = Subtotal + Shipping + Tax -->
               </div>
               <a
                 href="check_out.html"
                 class="btn btn-block btn-primary my-3 py-3"
+                >Proceed To Checkout</a
               >
-                Proceed To Checkout
-              </a>
             </div>
           </div>
         </div>
@@ -285,7 +276,6 @@
               BrowChips
             </h1>
           </a>
-
           <p>
             At Brow Chips, we believe that every bite should bring joy. That's
             why we use only the finest ingredients, ensuring our brownies are
@@ -299,10 +289,10 @@
             <i class="fa fa-map-marker-alt text-primary mr-3"></i>Cikarang
           </p>
           <p class="mb-2">
-            <i class="fa fa-envelope text-primary mr-3"></i>info@BrowChips.com
+            <i class="fa fa-envelope text-primary mr-3"></i>BrowChips@gmail.com
           </p>
           <p class="mb-2">
-            <i class="fa fa-phone-alt text-primary mr-3"></i>0811223344556
+            <i class="fa fa-phone-alt text-primary mr-3"></i>0987654321
           </p>
         </div>
         <div class="col-lg-2 col-md-12">
@@ -311,9 +301,7 @@
             <li class="my-3">
               <a href="" class="text-primary">How To Order</a>
             </li>
-            <li class="my-3">
-              <a href="" class="text-primary">FAQs</a>
-            </li>
+            <li class="my-3"><a href="" class="text-primary">FAQs</a></li>
           </ul>
           <h5 class="font-weight-bold my-4">Follow Us</h5>
           <div class="d-flex">
@@ -335,8 +323,7 @@
       >
         <div class="col-md-6 text-center">
           <p class="mb-md-0 text-dark">
-            &copy;
-            <a class="text-dark font-weight-semi-bold" href="#"
+            &copy;<a class="text-dark font-weight-semi-bold" href="#"
               >2024 BrowChips</a
             >. All Rights Reserved.
           </p>
@@ -353,14 +340,94 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+      // Fungsi untuk menghitung total pembayaran
+      function calculateTotal() {
+        let subtotal = 0;
+
+        // Loop setiap baris produk untuk menghitung subtotal
+        $("tbody tr").each(function () {
+          const price = parseFloat(
+            $(this).find("td:nth-child(2)").text().replace("$", "")
+          );
+          const quantity = parseInt($(this).find(".form-control").val());
+          const total = price * quantity;
+
+          // Perbarui total untuk produk ini
+          $(this)
+            .find("td:nth-child(4)")
+            .text(`$${total.toFixed(2)}`);
+          subtotal += total;
+        });
+
+        // Update subtotal, shipping, tax, dan total akhir
+        const tax = subtotal * 0.1; // Pajak 10%
+        const total = subtotal + tax;
+
+        // Perbarui nilai di summary
+        $(".cart-summary .subtotal").text(`$${subtotal.toFixed(2)}`);
+        $(".cart-summary .tax").text(`$${tax.toFixed(2)}`);
+        $(".cart-summary .total").text(`$${total.toFixed(2)}`);
+      }
+
+      // Event listener untuk tombol minus
+      $(".btn-minus").click(function () {
+        const quantityInput = $(this)
+          .closest(".quantity")
+          .find(".form-control");
+        let quantity = parseInt(quantityInput.val());
+
+        if (quantity > 1) {
+          quantityInput.val(--quantity);
+          calculateTotal();
+        }
+      });
+
+      // Event listener untuk tombol plus
+      $(".btn-plus").click(function () {
+        const quantityInput = $(this)
+          .closest(".quantity")
+          .find(".form-control");
+        let quantity = parseInt(quantityInput.val());
+
+        quantityInput.val(++quantity);
+        calculateTotal();
+      });
+
+      // Hitung total saat halaman dimuat
+      calculateTotal();
+      $(".btn-delete").click(function () {
+        const row = $(this).closest("tr");
+
+        Swal.fire({
+          title: "Are you sure?",
+          text: "Do you really want to remove this item from the cart?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonText: "Yes, remove it!",
+          confirmButtonColor: "#FFC107",
+          cancelButtonText: "Cancel",
+          customClass: {
+            title: "text-primary",
+            confirmButtonColor: "btn-primary",
+          },
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Hapus baris
+            row.remove();
+
+            // Perbarui total setelah baris dihapus
+            calculateTotal();
+
+            Swal.fire("Deleted!", "The item has been removed.", "success");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

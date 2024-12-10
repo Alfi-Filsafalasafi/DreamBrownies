@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register - BrowChips</title>
-
     <!-- Favicon -->
     <link href="img/logo.JPG" rel="icon" />
 
@@ -93,7 +92,6 @@
                         class="form-control"
                         required
                       >
-                        <option value="">Select your gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
@@ -101,7 +99,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -127,10 +124,16 @@
                         placeholder="Enter your email"
                         required
                       />
+                      <small
+                        id="emailTips"
+                        class="form-text text-success"
+                        style="display: none"
+                      >
+                        Use a valid email format, e.g., example@gmail.com.
+                      </small>
                     </div>
                   </div>
                 </div>
-
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -143,6 +146,7 @@
                         placeholder="Enter your password"
                         required
                       />
+                      <small id="passwordStrength" class="form-text"></small>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -161,7 +165,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="form-group">
                   <label for="address">Address</label>
                   <textarea
@@ -173,15 +176,18 @@
                     required
                   ></textarea>
                 </div>
-
                 <button type="submit" class="btn btn-primary btn-block">
                   Register
                 </button>
               </form>
               <div class="text-center mt-3">
                 <p>
-                  Already have an account?
-                  <a href="index.html" class="text-primary">Login</a>
+                  Already have an account?<a
+                    href="index.html"
+                    class="text-primary"
+                  >
+                    Login</a
+                  >
                 </p>
               </div>
             </div>
@@ -198,31 +204,79 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Custom Script -->
     <script>
       // Handle form submission
-      document
-        .getElementById("registerForm")
-        .addEventListener("submit", function (e) {
+      $(document).ready(function () {
+        // Handle form submission
+        $("#registerForm").on("submit", function (e) {
           e.preventDefault(); // Prevent default form submission
 
           // Get password and password confirmation values
-          const password = document.getElementById("password").value;
-          const passwordConfirmation = document.getElementById(
-            "passwordConfirmation"
-          ).value;
+          const password = $("#password").val();
+          const passwordConfirmation = $("#passwordConfirmation").val();
 
           // Check if password and password confirmation match
           if (password !== passwordConfirmation) {
-            alert("Password and password confirmation do not match.");
+            Swal.fire({
+              title: "Error!",
+              text: "Password and password confirmation do not match.",
+              icon: "error",
+              confirmButtonText: "Try Again",
+              customClass: {
+                confirmButton: "btn btn-primary",
+              },
+            });
             return; // Stop form submission if they don't match
           }
 
-          // If passwords match, proceed to redirect
-          alert("Registration successful!");
-          window.location.href = "index.html"; // Redirect to index.html after successful registration
+          // If passwords match, show success message and redirect
+          Swal.fire({
+            title: "Success!",
+            text: "Registration successful!",
+            icon: "success",
+            confirmButtonText: "OK",
+            customClass: {
+              confirmButton: "btn btn-primary",
+            },
+          }).then(() => {
+            window.location.href = "index.html"; // Redirect to index.html after successful registration
+          });
         });
+        $("#email").focus(function () {
+          $("#emailTips").show(); // Show tips
+        });
+        // Handle keypress event to check password strength
+        $("#password").on("input", function () {
+          const password = $(this).val();
+          const $strengthIndicator = $("#passwordStrength");
+          let strength = "Weak";
+
+          // Check password strength
+          if (password.length >= 8) {
+            if (/[A-Z]/.test(password) && /[a-z]/.test(password)) {
+              if (/\d/.test(password) && /[@$!%*?&#]/.test(password)) {
+                strength = "Strong";
+              } else {
+                strength = "Medium";
+              }
+            }
+          }
+
+          // Update strength indicator
+          $strengthIndicator.text(`Password strength: ${strength}`);
+          $strengthIndicator.css(
+            "color",
+            strength === "Strong"
+              ? "green"
+              : strength === "Medium"
+              ? "orange"
+              : "red"
+          );
+        });
+      });
     </script>
   </body>
 </html>

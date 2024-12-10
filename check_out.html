@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>BrowChips</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Free HTML Templates" name="keywords" />
-    <meta content="Free HTML Templates" name="description" />
+    <meta charset="utf-8"/>
+    <title>Check Out - BrowChips</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Free HTML Templates" name="keywords"/>
+    <meta content="Free HTML Templates" name="description"/>
 
     <!-- Favicon -->
-    <link href="img/logo.JPG" rel="icon" />
+    <link href="img/logo.JPG" rel="icon"/>
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 
     <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -36,58 +30,27 @@
       <div class="row align-items-center py-3 px-xl-5">
         <div class="col-lg-3 d-none d-lg-block">
           <a href="" class="text-decoration-none d-flex align-items-center">
-            <div
-              class="mr-2"
-              style="
-                width: 50px;
-                height: 50px;
-                overflow: hidden;
-              "
-            >
-              <img
-                src="img/logo.JPG"
-                alt="Logo"
-                style="width: 100%; height: auto"
-              />
+            <div class="mr-2" style=" width: 50px; height: 50px; overflow: hidden;">
+              <img src="img/logo.JPG" alt="Logo" style="width: 100%; height: auto"/>
             </div>
-            <h1
-              class="m-0 display-5 font-weight-semi-bold"
-              style="color: saddlebrown"
-            >
-              BrowChips
-            </h1>
+            <h1 class="m-0 display-5 font-weight-semi-bold" style="color: saddlebrown">BrowChips</h1>
           </a>
         </div>
         <div class="col-lg-6 text-left">
-          <nav
-            class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0"
-          >
+          <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
             <a href="home.html" class="text-decoration-none d-lg-none">
-              <h1
-                class="mb-3 m-md-0 display-5 font-weight-semi-bold mt-3 mt-md-0"
-              >
-                BrowChips
-              </h1>
+              <h1 class="mb-3 m-md-0 display-5 font-weight-semi-bold mt-3 mt-md-0">BrowChips</h1>
             </a>
-            <button
-              type="button"
-              class="navbar-toggler"
-              data-toggle="collapse"
-              data-target="#navbarCollapse"
-            >
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div
-              class="collapse navbar-collapse justify-content-between"
-              id="navbarCollapse"
-            >
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
               <div class="navbar-nav mr-auto py-0">
                 <a href="home.html" class="nav-item nav-link">Home</a>
-                <a href="our_products.html" class="nav-item nav-link"
-                  >Our Product</a
-                >
+                <a href="our_products.html" class="nav-item nav-link">Product</a>
                 <a href="contact_us.html" class="nav-item nav-link">Contact </a>
                 <a href="about_us.html" class="nav-item nav-link">About Us</a>
+                <a href="check_out.html" class="nav-item nav-link">Check Out</a>
               </div>
             </div>
           </nav>
@@ -95,11 +58,7 @@
         <div class="col-lg-3">
           <form action="">
             <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Search for products"
-              />
+              <input type="text" class="form-control" placeholder="Search for products"/>
               <div class="input-group-append">
                 <span class="input-group-text bg-transparent text-primary">
                   <i class="fa fa-search"></i>
@@ -152,11 +111,9 @@
                             
                             <div class="col-md-6 form-group">
                                 <label>Shipping Method</label>
-                                <select class="custom-select" required>
-                                    <option value="">Select method</option>
+                                <select class="custom-select" name="shippingMethod" required>
                                     <option value="Regular" selected>Regular</option>
                                     <option value="Express">Express</option>
-                                    <option value="Gosend">Gosend</option>
                                 </select>
                             </div>
                             <div class="col-md-12 form-group">
@@ -165,7 +122,7 @@
                           </div>
             
                             <div class="col-md-12 form-group">
-                                <label>Please select your preferences (required):</label>
+                                <label>Please select your preferences:</label>
                                 <div>
                                     <input type="checkbox" id="nuts" name="preferences" value="nuts">
                                     <label for="nuts">Nuts</label>
@@ -173,14 +130,6 @@
                                 <div>
                                     <input type="checkbox" id="chocolate" name="preferences" value="chocolate">
                                     <label for="chocolate">Chocolate</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="chips" name="preferences" value="chips">
-                                    <label for="chips">Chips</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="cheese" name="preferences" value="cheese">
-                                    <label for="cheese">Cheese</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="caramel" name="preferences" value="caramel">
@@ -221,37 +170,38 @@
                       </div>
                       <!-- Voucher Code Input -->
                       <div class="d-flex mt-4">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Enter voucher code"
-                          id="voucher-code"
-                          aria-label="Voucher Code"
-                        />
-                        <button
-                          type="button"
-                          class="btn btn-secondary ml-2"
-                          id="apply-voucher"
-                        >
-                          Apply
-                        </button>
+                        <input type="text" class="form-control" placeholder="Enter voucher code" id="voucher-code" aria-label="Voucher Code" />
+                        <button type="button" class="btn btn-secondary ml-2" id="apply-voucher">Apply</button>
                       </div>
+                      <div id="voucher-info" class="text-success" style="display: none; margin-top: 10px; font-size: 12px;">
+                        Enter a voucher to receive benefits such as discounts, free shipping, and more.
+                      </div>
+                      
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
+                      <div class="d-flex justify-content-between mt-2">
+                        <h6 class="font-weight-bold">Shipping</h6>
+                        <h6 class="font-weight-bold" id="shipping-cost">$0.5</h6>
+                        <!-- Total = Subtotal + Shipping + Tax -->
+                      </div>
+                      <div class="d-flex justify-content-between mt-2">
+                        <h6 class="font-weight-bold">Preferences</h6>
+                        <h6 class="font-weight-bold" id="preference-cost">$0.0</h6>
+                        <!-- Total = Subtotal + Shipping + Tax -->
+                      </div>
+<hr>
                       <div class="d-flex justify-content-between mt-2">
                         <h5 class="font-weight-bold">Total</h5>
                         <h5 class="font-weight-bold" id="total-amount">$19.67</h5>
                         <!-- Total = Subtotal + Shipping + Tax -->
                       </div>
-                      <button
-                        type="submit"
-                        class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3"
-                      >
-                        Send Order
-                      </button>
+                     
+                      <button type="submit" id="submitBtn" class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Send Order</button>
+                      <div id="message" class="text-success" style="display: none; margin-top: 10px;">Make sure all inputs are completed.</div>
+                    
                     </div>
                   </div>
-                  
+
                 <div class="card border-secondary ">
                     <div class="m-4">
                         <h4 class="font-weight-semi-bold mb-4">Steps for Payment</h4>
@@ -268,10 +218,6 @@
                     </div>
                 </div>
             </div>
-            
-                
-            
-            
         </div>
     </div>
     <!-- Checkout End -->
@@ -280,93 +226,44 @@
     <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
       <div class="row justify-content-center px-xl-5 pt-5">
         <div class="col-lg-6 col-md-12 mb-5">
-          <a
-            href=""
-            class="text-decoration-none d-flex align-items-center justify-content-start mb-3"
-          >
-            <div
-              class="mr-2"
-              style="
-                width: 50px;
-                height: 50px;
-                overflow: hidden;
-                background-color: white;
-              "
-            >
-              <img
-                src="img/logo.JPG"
-                alt="Logo"
-                style="width: 100%; height: auto"
-              />
+          <a href="" class="text-decoration-none d-flex align-items-center justify-content-start mb-3">
+            <div class="mr-2" style="width: 50px; height: 50px; overflow: hidden; background-color: white;">
+              <img src="img/logo.JPG" alt="Logo" style="width: 100%; height: auto"/>
             </div>
-            <h1
-              class="mb-0 display-5 font-weight-semi-bold"
-              style="color: saddlebrown; line-height: 50px"
-            >
-              BrowChips
-            </h1>
+            <h1 class="mb-0 display-5 font-weight-semi-bold" style="color: saddlebrown; line-height: 50px">BrowChips</h1>
           </a>
-
-          <p>
-            At Brow Chips, we believe that every bite should bring joy. That's why we use only the finest ingredients, ensuring our brownies are made with care and attention to detail. From classic chocolate to unique flavors, there's something for everyone to enjoy.
-          </p>
+          <p>At Brow Chips, we believe that every bite should bring joy. That's why we use only the finest ingredients, ensuring our brownies are made with care and attention to detail. From classic chocolate to unique flavors, there's something for everyone to enjoy.</p>
         </div>
         <div class="col-lg-3 col-md-12">
           <h5 class="font-weight-semi-bold mt-3 mb-4">Store</h5>
-          <p class="mb-2">
-            <i class="fa fa-map-marker-alt text-primary mr-3"></i>Cikarang
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-envelope text-primary mr-3"></i>info@BrowChips.com
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-phone-alt text-primary mr-3"></i>0811223344556
-          </p>
+          <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Cikarang</p>
+          <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>BrowChips@gmail.com</p>
+          <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>0987654321</p>
         </div>
         <div class="col-lg-2 col-md-12">
           <h5 class="font-weight-semi-bold mb-4 mt-3">Help</h5>
           <ul type="none" class="border-0 rounded-0 w-100 m-0 pl-0">
-            <li class="my-3">
-              <a href="" class="text-primary">How To Order</a>
-            </li>
-            <li class="my-3">
-              <a href="" class="text-primary">FAQs</a>
-            </li>
+            <li class="my-3"><a href="" class="text-primary">How To Order</a></li>
+            <li class="my-3"><a href="" class="text-primary">FAQs</a></li>
           </ul>
           <h5 class="font-weight-bold my-4">Follow Us</h5>
           <div class="d-flex">
-            <a href="#" class="btn btn-outline-primary mr-2"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" class="btn btn-outline-primary mr-2"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="#" class="btn btn-outline-primary mr-2"
-              ><i class="fab fa-instagram"></i
-            ></a>
+            <a href="#" class="btn btn-outline-primary mr-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-primary mr-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-outline-primary mr-2"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
-
-      <div
-        class="row border-top border-light mx-xl-5 mt-5 py-4 justify-content-center"
-      >
+      <div class="row border-top border-light mx-xl-5 mt-5 py-4 justify-content-center">
         <div class="col-md-6 text-center">
-          <p class="mb-md-0 text-dark">
-            &copy;
-            <a class="text-dark font-weight-semi-bold" href="#"
-              >2024 BrowChips</a
-            >. All Rights Reserved.
-          </p>
+          <p class="mb-md-0 text-dark">&copy;<a class="text-dark font-weight-semi-bold" href="#">2024 BrowChips</a>. All Rights Reserved.</p>
         </div>
       </div>
     </div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"
-      ><i class="fa fa-angle-double-up"></i
-    ></a>
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -380,5 +277,68 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Menangani event mousemove dan mouseout pada tombol submit
+        $('#submitBtn').on('mousemove', function () {
+          $('#message').show(); // Menampilkan pesan
+        });
+    
+        $('#submitBtn').on('mouseout', function () {
+          $('#message').hide(); // Menyembunyikan pesan
+        });
+    
+        // Menangani event mouseover dan mouseout pada tombol dan input voucher
+        $('#apply-voucher, #voucher-code').on('mouseover', function () {
+          $('#voucher-info').show(); // Menampilkan pesan
+        });
+    
+        $('#apply-voucher, #voucher-code').on('mouseout', function () {
+          $('#voucher-info').hide(); // Menyembunyikan pesan
+        });
+    
+        // Fungsi untuk menghitung total biaya
+        const baseTotal = 19.67;
+    
+        function calculateTotal() {
+          let total = baseTotal;
+    
+          // Tambahan biaya pengiriman
+          let shippingCost = 0;
+          const selectedShipping = $('select[name="shippingMethod"]').val();
+          if (selectedShipping === 'Express') {
+            shippingCost = 1.5;
+          } else if (selectedShipping === 'Regular') {
+            shippingCost = 0.5;
+          }
+          total += shippingCost;
+    
+          // Tambahan biaya preferensi
+          let preferenceCost = 0;
+          $('input[name="preferences"]:checked').each(function () {
+            preferenceCost += 0.2;
+          });
+    
+          total += preferenceCost;
+    
+          // Perbarui rincian biaya di UI
+          $('#shipping-cost').text(`$${shippingCost.toFixed(2)}`);
+          $('#preference-cost').text(`$${preferenceCost.toFixed(2)}`);
+          $('#total-amount').text(`$${total.toFixed(2)}`);
+        }
+    
+        // Tambahkan event listener untuk shipping method
+        $('select[name="shippingMethod"]').on('change', calculateTotal);
+    
+        // Tambahkan event listener untuk setiap checkbox preferences
+        $('input[name="preferences"]').on('change', calculateTotal);
+    
+        // Panggil fungsi untuk inisialisasi total awal
+        calculateTotal();
+      });
+    </script>
+    
+
   </body>
 </html>

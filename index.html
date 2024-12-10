@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - BrowChips</title>
+    <title>BrowChips</title>
 
     <!-- Favicon -->
     <link href="img/logo.JPG" rel="icon" />
@@ -28,6 +28,12 @@
 
     <!-- Bootstrap CSS -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- SweetAlert2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css"
+    />
   </head>
   <body>
     <!-- Topbar Start -->
@@ -71,15 +77,22 @@
             <div class="card-body">
               <form id="loginForm" method="POST">
                 <div class="form-group">
-                  <label for="username">Username</label>
+                  <label for="email">Email</label>
                   <input
-                    type="text"
-                    name="username"
-                    id="username"
+                    type="email"
+                    name="email"
+                    id="email"
                     class="form-control"
-                    placeholder="Enter your username"
+                    placeholder="Enter your email"
                     required
                   />
+                  <small
+                    id="emailTips"
+                    class="form-text text-success"
+                    style="display: none"
+                  >
+                    Use a valid email format, e.g., example@gmail.com.
+                  </small>
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
@@ -92,8 +105,9 @@
                     required
                   />
                   <small
-                    >Forgout Password ? <a href="forgot_password.html">Reset</a>
-                  </small>
+                    >Forgot Password?
+                    <a href="forgot_password.html">Reset</a></small
+                  >
                 </div>
                 <div class="form-group form-check">
                   <input
@@ -111,8 +125,12 @@
               </form>
               <div class="text-center mt-3">
                 <p>
-                  Don't have an account?
-                  <a href="register.html" class="text-primary">Register</a>
+                  Don't have an account?<a
+                    href="register.html"
+                    class="text-primary"
+                  >
+                    Register</a
+                  >
                 </p>
               </div>
             </div>
@@ -130,31 +148,65 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+
     <!-- Custom Script -->
     <script>
-      // Form validation and login functionality
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (e) {
+      $(document).ready(function () {
+        // Form validation and login functionality
+        $("#loginForm").submit(function (e) {
           e.preventDefault(); // Prevent form submission
 
           // Default login credentials
-          const username = "pelanggan";
+          const email = "owner@gmail.com";
           const password = "123456789";
 
           // Get user input
-          const enteredUsername = document.getElementById("username").value;
-          const enteredPassword = document.getElementById("password").value;
+          const enteredEmail = $("#email").val();
+          const enteredPassword = $("#password").val();
 
           // Check if the entered credentials match the default ones
-          if (enteredUsername === username && enteredPassword === password) {
-            // Redirect to home page if credentials are correct
-            window.location.href = "home.html";
+          if (enteredEmail === email && enteredPassword === password) {
+            // Show success alert and redirect to home page
+            Swal.fire({
+              icon: "success",
+              title: "Login Successful",
+              text: "Welcome back!",
+              confirmButtonText: "Continue",
+              customClass: {
+                title: "text-primary",
+                confirmButton: "btn-primary px-3",
+              },
+              buttonsStyling: false,
+            }).then(() => {
+              window.location.href = "home.html";
+            });
           } else {
-            // Alert if credentials are incorrect
-            alert("Invalid username or password");
+            // Show error alert
+            Swal.fire({
+              icon: "error",
+              title: "Login Failed",
+              text: "Invalid email or password. Please try again.",
+              customClass: {
+                title: "text-primary",
+                confirmButton: "btn btn-primary px-3",
+              },
+              buttonsStyling: false,
+            });
           }
         });
+
+        // Focus event to show email tips
+        $("#email").focus(function () {
+          $("#emailTips").show(); // Show tips
+        });
+
+        // Blur event to hide email tips
+        $("#email").blur(function () {
+          $("#emailTips").hide(); // Hide tips
+        });
+      });
     </script>
   </body>
 </html>
